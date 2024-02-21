@@ -1,0 +1,101 @@
+.main-top {
+  background-color: #12663C;
+  overflow: hidden;
+  position: relative;
+  .text-block {
+    flex-shrink: 0;
+    width:45.7%;
+    padding-top: 149px;
+    padding-bottom: 177px;
+    padding-right: 16px;
+
+    @include laptop{
+      width: 50%;
+    }
+    @include tablet{
+      width: 100%;
+      padding-right: 0;
+      text-align: center;
+      padding-top: 120px;
+      padding-bottom: 30px;
+      position: relative;
+      z-index: 5;
+    }
+    .title{
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 48px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      color: #FFFFFF;
+      @include tablet{
+        font-size: 36px;
+        line-height: 1;
+      }
+      @include mobile{
+        font-size: 28px;
+
+      }
+    }
+    .text{
+      font-size: 18px;
+      line-height: 22px;
+      color: #FFFFFF;
+      max-width: 648px;
+      font-weight: 400;
+      margin-bottom: 38px;
+      @include tablet{
+        font-size: 16px;
+        line-height: 22px;
+        max-width: none;
+      }
+
+
+    }
+    .button{
+      width: 222px;
+    }
+  }
+  &-inner{
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    @include tablet{
+      flex-direction: column;
+    }
+
+  }
+  .image-block {
+    aspect-ratio: 1.86 /1;
+    width: 54vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    @include tablet{
+      width: 100%;
+      height: 100%;
+      margin-bottom: 30px;
+      position: absolute;
+      left: 0;
+      object-fit: cover;
+      z-index: 0;
+      &:after{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: rgba(18, 102, 60, 0.8);;
+        z-index: 2;
+      }
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.area{
+  display: flex;
+  align-items: center;
+  color: #222222;
+  font-size: 17px;
+  line-height: 21px;
+  gap: 10px;
+  @include mobile{
+    font-size: 16px;
+    gap: 5px;
+  }
+  &-item{
+    width: 35px;
+    height: 35px;
+    font-size: 17px;
+    line-height: 35px;
+    border-radius: 6px;
+    text-align: center;
+    color: #3C3C3C;
+    text-decoration: none;
+    flex-shrink: 0;
+    font-weight: 700;
+    transition: 0.4s ease;
+    @include mobile{
+      font-size: 14px;
+      width: 25px;
+      height: 25px;
+      line-height: 25px;
+    }
+    &:hover{
+      color: #FC992E
+    }
+    &.current{
+      background: #307E57;
+      color: #FFFFFF;
+    }
+  }
+
+}

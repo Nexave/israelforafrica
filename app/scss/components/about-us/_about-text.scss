@@ -1,0 +1,111 @@
+.about-text{
+  h2,.title{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+    margin-bottom: 63px;
+    max-width: 319px;
+    text-align: left;
+    @include tablet{
+      font-size: 32px;
+      line-height: 1;
+    }
+    @include mobile{
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+  }
+  p{
+    text-align: justify;
+  }
+  .row{
+    display:flex ;
+    justify-content: space-between;
+    gap:30px;
+    margin-bottom: 30px;
+    align-items: center;
+    @include tablet{
+      flex-direction: column-reverse;
+    }
+    &:nth-of-type(odd){
+      flex-direction: row-reverse;
+      @include tablet{
+        flex-direction: column-reverse;
+      }
+    }
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+    img{
+      @include tablet{
+        margin-left: auto;
+        margin-right:  auto;
+      }
+    }
+    &:nth-of-type(1){
+      img{
+        max-width: 456px;
+        height: auto;
+        width: 100%;
+      }
+      .text{
+        max-width: 600px;
+        @include tablet{
+         max-width: none;
+        }
+      }
+    }
+
+    &:nth-of-type(2){
+      img{
+        max-width: 417px;
+        height: auto;
+        width: 100%;
+      }
+      .text{
+        max-width: 641px;
+        @include tablet{
+          max-width: none;
+        }
+      }
+    }
+    &:nth-of-type(3){
+      img{
+        max-width: 423px;
+        width: 100%;
+        height: auto;
+      }
+      .text{
+        max-width: 675px;
+        @include tablet{
+          max-width: none;
+        }
+      }
+    }
+    &:nth-of-type(4){
+      margin-top: -100px;
+      @include tablet{
+        margin-top: 0;
+      }
+      img{
+        max-width: 495px;
+        height: auto;
+        width: 100%;
+      }
+      .text{
+        padding-top: 150px;
+        max-width: 634px;
+        @include tablet{
+          max-width: none;
+          padding-top: 0;
+        }
+      }
+    }
+  }
+
+}
+.bg-block{
+  background-color:  #FFFFFF;
+
+}

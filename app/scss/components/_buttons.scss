@@ -1,0 +1,41 @@
+.button{
+  display: inline-block;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  text-align: center;
+  text-decoration: none;
+
+  &-gradient{
+    background: linear-gradient(180deg, #CD1E29 0%, #FD9C2E 100%);
+    border-radius: 30px;
+    padding: 15px 10px;
+    min-width: 168px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    transition: all 0.4s ease;
+    font-weight: 700;
+    border: 2px solid #FFFFFF;
+    &:hover{
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+  &-transparent{
+    background: transparent;
+    border-radius: 30px;
+    padding: 15px 10px;
+    min-width: 168px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    transition: all 0.4s ease;
+    font-weight: 700;
+    border: 2px solid #FFFFFF;
+    &:hover{
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+}

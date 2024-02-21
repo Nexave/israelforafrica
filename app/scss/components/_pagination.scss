@@ -1,0 +1,84 @@
+.pagination{
+  .nav-links{
+    display: flex;
+    align-items: center;
+    .page-numbers{
+      width: 35px;
+      height: 35px;
+      font-size: 17px;
+      line-height: 35px;
+      border-radius: 6px;
+      text-align: center;
+      color: #3C3C3C;
+      text-decoration: none;
+      flex-shrink: 0;
+      font-weight: 700;
+      transition: 0.4s ease;
+      @include mobile{
+        font-size: 14px;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+      }
+      &:hover{
+        color: #FC992E;
+      }
+      &.current{
+        background: #307E57;
+        color: #FFFFFF;
+      }
+      &.dots{
+        color: #A4AAB2;
+        pointer-events: none;
+      }
+      &.prev{
+        position: relative;
+        margin-right: 15px;
+        @include mobile{
+          margin-right: 5px;
+        }
+        &:after{
+          position: absolute;
+          content: '';
+          width: 35px;
+          height: 35px;
+          mask: url('../img/icons/chevron-icon.svg');
+          mask-repeat: no-repeat;
+          mask-size: contain;
+          mask-position: center;
+          background-color: #3C3C3C;
+          top: 50%;
+          left: 50%;
+          transform: translateY(-50%) translateX(-50%) rotate(180deg);
+          transform-origin: center;
+          @include mobile{
+            margin-right: 10px;
+          }
+        }
+      }
+      &.next{
+        margin-left: 15px;
+        position: relative;
+        @include mobile{
+          margin-left: 5px;
+        }
+        &:after{
+          position: absolute;
+          content: '';
+          width: 35px;
+          height: 35px;
+          mask: url('../img/icons/chevron-icon.svg');
+          mask-repeat: no-repeat;
+          mask-size: contain;
+          mask-position: center;
+          background-color: #3C3C3C;
+          top: 50%;
+          left: 50%;
+          transform: translateY(-50%) translateX(-50%);
+          transform-origin: center;
+
+        }
+      }
+    }
+  }
+}
